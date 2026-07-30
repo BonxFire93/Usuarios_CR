@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Usuarios</h1>
+    <a href="/formulario">Nuevo Usuario</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre Completo</th>
+                <th>Email</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in todos_los_usuarios %}
+            <tr>
+                <td> {{ elemento.id }} </td>
+                <td> {{ elemento.nombre }} {{ elemento.apellido }} </td>
+                <td> {{ elemento.email }} </td>
+                <td> {{ elemento.created_at }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
